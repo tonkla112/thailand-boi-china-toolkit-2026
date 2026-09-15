@@ -5,6 +5,8 @@
 
 A responsive, trilingual HR workspace built from the Rev01 Excel toolkit. It connects employee records, document readiness, BOI position planning, processing batches, costs, expiry alerts and employee changes.
 
+[Open the live application](https://tonkla112.github.io/thailand-boi-china-toolkit-2026/) · [Implementation report](docs/implementation-report.md)
+
 ## Public demonstration
 
 This is a **static demonstration with synthetic employees**. GitHub Pages is not a secure employee database. Do not enter or publish real names, passport numbers, immigration records, documents or other confidential personnel data. The source workbook is excluded from version control and from the deployment build.

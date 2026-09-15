@@ -55,7 +55,9 @@ Key files: `index.html`, `js/app.js`, `js/domain.js`, `js/store.js`, `js/transla
 
 [GitHub Pages application](https://tonkla112.github.io/thailand-boi-china-toolkit-2026/)
 
-Deployment verification will be recorded after the live-site test completes.
+Deployment succeeded on 15 September 2026. The complete browser workflow suite passed against the actual HTTPS GitHub Pages URL: all nine modules in English, Chinese and Thai; desktop and 390px mobile layouts; employee, checklist, renewal, position, batch, budget and replacement workflows; local persistence, reset and validation. No JavaScript page or console errors were observed. CSS, JSON, scripts, charts and resource links loaded correctly.
+
+[Successful deployment run](https://github.com/tonkla112/thailand-boi-china-toolkit-2026/actions/runs/34921868609) · tested application commit `8345f92`. The first attempt began before Pages was enabled; rerunning after configuration succeeded. The public app was opened for review. Subsequent documentation-only updates do not change the tested application assets.
 
 ## J. Phase 2
 
