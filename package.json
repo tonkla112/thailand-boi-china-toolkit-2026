@@ -1,0 +1,17 @@
+{
+  "name": "thailand-boi-toolkit-2026",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 4173",
+    "test": "node --test tests/domain.test.js",
+    "build": "node tools/build.js",
+    "test:browser": "node tests/browser.cjs",
+    "format": "prettier --write index.html css js tests tools/build.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.58.2",
+    "prettier": "^3.6.2"
+  }
+}

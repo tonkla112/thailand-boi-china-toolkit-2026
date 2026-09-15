@@ -1,0 +1,1376 @@
+{
+  "schema": {
+    "employees": {
+      "no": {
+        "zh": "序号",
+        "en": "No.",
+        "th": "ลำดับ"
+      },
+      "name": {
+        "zh": "员工姓名",
+        "en": "Employee name",
+        "th": "ชื่อพนักงาน"
+      },
+      "englishName": {
+        "zh": "英文姓名",
+        "en": "English name",
+        "th": "ชื่อภาษาอังกฤษ"
+      },
+      "passport": {
+        "zh": "护照号",
+        "en": "Passport No.",
+        "th": "เลขหนังสือเดินทาง"
+      },
+      "nationality": {
+        "zh": "国籍",
+        "en": "Nationality",
+        "th": "สัญชาติ"
+      },
+      "department": {
+        "zh": "部门",
+        "en": "Department",
+        "th": "แผนก"
+      },
+      "position": {
+        "zh": "职位",
+        "en": "Position",
+        "th": "ตำแหน่ง"
+      },
+      "positionId": {
+        "zh": "BOI批准职位",
+        "en": "BOI-approved position",
+        "th": "ตำแหน่งที่ BOI อนุมัติ"
+      },
+      "location": {
+        "zh": "工作地点",
+        "en": "Work location",
+        "th": "สถานที่ทำงาน"
+      },
+      "startDate": {
+        "zh": "入职日期",
+        "en": "Employment start date",
+        "th": "วันที่เริ่มงาน"
+      },
+      "positionApprovalDate": {
+        "zh": "BOI职位批准日期",
+        "en": "BOI position approval date",
+        "th": "วันที่อนุมัติตำแหน่ง BOI"
+      },
+      "personnelApprovalDate": {
+        "zh": "人员批准日期",
+        "en": "Personnel approval date",
+        "th": "วันที่อนุมัติบุคลากร"
+      },
+      "visaExpiry": {
+        "zh": "Non-B/IB签证到期",
+        "en": "Non-B/IB visa expiry",
+        "th": "วันหมดอายุวีซ่า Non-B/IB"
+      },
+      "stayExpiry": {
+        "zh": "Stay到期",
+        "en": "Stay expiry",
+        "th": "วันหมดอายุสิทธิอยู่ต่อ"
+      },
+      "wpExpiry": {
+        "zh": "Work Permit到期",
+        "en": "Work permit expiry",
+        "th": "วันหมดอายุใบอนุญาตทำงาน"
+      },
+      "reentry": {
+        "zh": "Re-entry状态",
+        "en": "Re-entry status",
+        "th": "สถานะ Re-entry"
+      },
+      "dependants": {
+        "zh": "家属",
+        "en": "Dependants",
+        "th": "ผู้ติดตาม"
+      },
+      "passportExpiry": {
+        "zh": "护照到期",
+        "en": "Passport expiry",
+        "th": "วันหมดอายุหนังสือเดินทาง"
+      },
+      "owner": {
+        "zh": "续签负责人",
+        "en": "Renewal owner",
+        "th": "ผู้รับผิดชอบการต่ออายุ"
+      },
+      "status": {
+        "zh": "当前状态",
+        "en": "Current status",
+        "th": "สถานะปัจจุบัน"
+      },
+      "remarks": {
+        "zh": "备注",
+        "en": "Remarks",
+        "th": "หมายเหตุ"
+      }
+    },
+    "documents": {
+      "category": {
+        "zh": "类别",
+        "en": "Category",
+        "th": "หมวดหมู่"
+      },
+      "name": {
+        "zh": "材料",
+        "en": "Document",
+        "th": "เอกสาร"
+      },
+      "employeeA": {
+        "zh": "员工A",
+        "en": "Employee A",
+        "th": "พนักงาน A"
+      },
+      "employeeB": {
+        "zh": "员工B",
+        "en": "Employee B",
+        "th": "พนักงาน B"
+      },
+      "employeeC": {
+        "zh": "员工C",
+        "en": "Employee C",
+        "th": "พนักงาน C"
+      },
+      "remarks": {
+        "zh": "备注",
+        "en": "Remarks",
+        "th": "หมายเหตุ"
+      }
+    },
+    "positions": {
+      "no": {
+        "zh": "序号",
+        "en": "No.",
+        "th": "ลำดับ"
+      },
+      "title": {
+        "zh": "职位",
+        "en": "Position",
+        "th": "ตำแหน่ง"
+      },
+      "recommended": {
+        "zh": "建议人数",
+        "en": "Recommended headcount",
+        "th": "จำนวนที่แนะนำ"
+      },
+      "department": {
+        "zh": "部门",
+        "en": "Department",
+        "th": "แผนก"
+      },
+      "responsibilities": {
+        "zh": "核心职责",
+        "en": "Core responsibilities",
+        "th": "หน้าที่หลัก"
+      },
+      "requirements": {
+        "zh": "学历/经验要求",
+        "en": "Education / experience requirements",
+        "th": "ข้อกำหนดด้านการศึกษา/ประสบการณ์"
+      },
+      "status": {
+        "zh": "BOI申请状态",
+        "en": "BOI application status",
+        "th": "สถานะคำขอ BOI"
+      },
+      "remarks": {
+        "zh": "备注",
+        "en": "Remarks",
+        "th": "หมายเหตุ"
+      }
+    },
+    "batches": {
+      "title": {
+        "zh": "批次",
+        "en": "Batch",
+        "th": "ชุด"
+      },
+      "category": {
+        "zh": "人员类别",
+        "en": "Personnel category",
+        "th": "ประเภทบุคลากร"
+      },
+      "recommended": {
+        "zh": "建议人数",
+        "en": "Recommended headcount",
+        "th": "จำนวนที่แนะนำ"
+      },
+      "plannedStart": {
+        "zh": "计划开始",
+        "en": "Planned start",
+        "th": "วันที่เริ่มตามแผน"
+      },
+      "plannedEnd": {
+        "zh": "计划完成",
+        "en": "Planned completion",
+        "th": "วันที่แล้วเสร็จตามแผน"
+      },
+      "stage": {
+        "zh": "当前阶段",
+        "en": "Current stage",
+        "th": "ขั้นตอนปัจจุบัน"
+      },
+      "owner": {
+        "zh": "负责人",
+        "en": "Owner",
+        "th": "ผู้รับผิดชอบ"
+      },
+      "remarks": {
+        "zh": "风险/备注",
+        "en": "Risk / remarks",
+        "th": "ความเสี่ยง/หมายเหตุ"
+      }
+    },
+    "budget": {
+      "employeeId": {
+        "zh": "员工",
+        "en": "Employee",
+        "th": "พนักงาน"
+      },
+      "category": {
+        "zh": "费用类别",
+        "en": "Cost category",
+        "th": "ประเภทค่าใช้จ่าย"
+      },
+      "estimated": {
+        "zh": "预算金额THB",
+        "en": "Budgeted amount (THB)",
+        "th": "งบประมาณ (บาท)"
+      },
+      "actual": {
+        "zh": "实际金额THB",
+        "en": "Actual amount (THB)",
+        "th": "ค่าใช้จ่ายจริง (บาท)"
+      },
+      "paymentDate": {
+        "zh": "付款日期",
+        "en": "Payment date",
+        "th": "วันที่ชำระเงิน"
+      },
+      "vendor": {
+        "zh": "供应商/机构",
+        "en": "Vendor / authority",
+        "th": "ผู้ขาย/หน่วยงาน"
+      },
+      "status": {
+        "zh": "状态",
+        "en": "Status",
+        "th": "สถานะ"
+      },
+      "remarks": {
+        "zh": "备注",
+        "en": "Remarks",
+        "th": "หมายเหตุ"
+      }
+    },
+    "renewals": {
+      "employeeId": {
+        "zh": "员工",
+        "en": "Employee",
+        "th": "พนักงาน"
+      },
+      "item": {
+        "zh": "项目",
+        "en": "Item",
+        "th": "รายการ"
+      },
+      "expiry": {
+        "zh": "到期日",
+        "en": "Expiry date",
+        "th": "วันหมดอายุ"
+      },
+      "days": {
+        "zh": "剩余天数",
+        "en": "Days remaining",
+        "th": "จำนวนวันที่เหลือ"
+      },
+      "alert": {
+        "zh": "预警级别",
+        "en": "Alert level",
+        "th": "ระดับแจ้งเตือน"
+      },
+      "owner": {
+        "zh": "负责人",
+        "en": "Owner",
+        "th": "ผู้รับผิดชอบ"
+      },
+      "action": {
+        "zh": "处理状态",
+        "en": "Action status",
+        "th": "สถานะดำเนินการ"
+      },
+      "remarks": {
+        "zh": "备注",
+        "en": "Remarks",
+        "th": "หมายเหตุ"
+      }
+    },
+    "changes": {
+      "employeeId": {
+        "zh": "员工",
+        "en": "Employee",
+        "th": "พนักงาน"
+      },
+      "positionId": {
+        "zh": "职位",
+        "en": "Position",
+        "th": "ตำแหน่ง"
+      },
+      "positionStatus": {
+        "zh": "BOI职位状态",
+        "en": "BOI position status",
+        "th": "สถานะตำแหน่ง BOI"
+      },
+      "lastDate": {
+        "zh": "离职日期",
+        "en": "Last working date",
+        "th": "วันที่ออกจากงาน"
+      },
+      "wpStatus": {
+        "zh": "Work Permit状态",
+        "en": "Work permit status",
+        "th": "สถานะใบอนุญาตทำงาน"
+      },
+      "stayStatus": {
+        "zh": "Stay状态",
+        "en": "Stay status",
+        "th": "สถานะสิทธิอยู่ต่อ"
+      },
+      "departure": {
+        "zh": "离境/Re-entry",
+        "en": "Departure / Re-entry",
+        "th": "ออกประเทศ/Re-entry"
+      },
+      "replacementId": {
+        "zh": "新员工",
+        "en": "Replacement employee",
+        "th": "พนักงานใหม่"
+      },
+      "application": {
+        "zh": "新员工BOI申请",
+        "en": "New employee BOI application",
+        "th": "คำขอ BOI ของพนักงานใหม่"
+      },
+      "owner": {
+        "zh": "负责人",
+        "en": "Owner",
+        "th": "ผู้รับผิดชอบ"
+      },
+      "remarks": {
+        "zh": "备注",
+        "en": "Remarks",
+        "th": "หมายเหตุ"
+      }
+    },
+    "resources": {
+      "name": {
+        "zh": "名称",
+        "en": "Name",
+        "th": "ชื่อ"
+      },
+      "url": {
+        "zh": "网址",
+        "en": "URL",
+        "th": "เว็บไซต์"
+      },
+      "purpose": {
+        "zh": "用途",
+        "en": "Purpose",
+        "th": "วัตถุประสงค์"
+      }
+    }
+  },
+  "source": "Rev01 workbook template",
+  "reviewed": "2026-09-15",
+  "documents": [
+    {
+      "id": "documents-1",
+      "category": {
+        "zh": "个人",
+        "en": "Personal",
+        "th": "ส่วนบุคคล"
+      },
+      "name": {
+        "zh": "护照",
+        "en": "Passport",
+        "th": "หนังสือเดินทาง"
+      },
+      "remarks": ""
+    },
+    {
+      "id": "documents-2",
+      "category": {
+        "zh": "个人",
+        "en": "Personal",
+        "th": "ส่วนบุคคล"
+      },
+      "name": {
+        "zh": "照片",
+        "en": "Photo",
+        "th": "รูปถ่าย"
+      },
+      "remarks": ""
+    },
+    {
+      "id": "documents-3",
+      "category": {
+        "zh": "个人",
+        "en": "Personal",
+        "th": "ส่วนบุคคล"
+      },
+      "name": {
+        "zh": "CV/简历",
+        "en": "CV / Résumé",
+        "th": "ประวัติย่อ / เรซูเม่"
+      },
+      "remarks": ""
+    },
+    {
+      "id": "documents-4",
+      "category": {
+        "zh": "个人",
+        "en": "Personal",
+        "th": "ส่วนบุคคล"
+      },
+      "name": {
+        "zh": "学历/学位",
+        "en": "Education / Degree",
+        "th": "การศึกษา / ปริญญา"
+      },
+      "remarks": ""
+    },
+    {
+      "id": "documents-5",
+      "category": {
+        "zh": "个人",
+        "en": "Personal",
+        "th": "ส่วนบุคคล"
+      },
+      "name": {
+        "zh": "工作经历证明",
+        "en": "Experience certificate",
+        "th": "หนังสือรับรองประสบการณ์ทำงาน"
+      },
+      "remarks": ""
+    },
+    {
+      "id": "documents-6",
+      "category": {
+        "zh": "个人",
+        "en": "Personal",
+        "th": "ส่วนบุคคล"
+      },
+      "name": {
+        "zh": "技术资格证书",
+        "en": "Technical qualification certificate",
+        "th": "ใบรับรองคุณวุฒิทางเทคนิค"
+      },
+      "remarks": ""
+    },
+    {
+      "id": "documents-7",
+      "category": {
+        "zh": "个人",
+        "en": "Personal",
+        "th": "ส่วนบุคคล"
+      },
+      "name": {
+        "zh": "劳动合同",
+        "en": "Employment contract",
+        "th": "สัญญาจ้างงาน"
+      },
+      "remarks": ""
+    },
+    {
+      "id": "documents-8",
+      "category": {
+        "zh": "岗位",
+        "en": "Position",
+        "th": "ตำแหน่ง"
+      },
+      "name": {
+        "zh": "岗位说明书",
+        "en": "Job Description",
+        "th": "รายละเอียดงาน"
+      },
+      "remarks": ""
+    },
+    {
+      "id": "documents-9",
+      "category": "BOI",
+      "name": {
+        "zh": "职位批准",
+        "en": "Position Approval",
+        "th": "การอนุมัติตำแหน่ง"
+      },
+      "remarks": ""
+    },
+    {
+      "id": "documents-10",
+      "category": "BOI",
+      "name": {
+        "zh": "引进/派驻批准",
+        "en": "Bringing-in / Placement Approval",
+        "th": "การอนุมัตินำเข้า/บรรจุ"
+      },
+      "remarks": ""
+    },
+    {
+      "id": "documents-11",
+      "category": {
+        "zh": "签证",
+        "en": "Visa",
+        "th": "วีซ่า"
+      },
+      "name": {
+        "zh": "Non-B/IB签证",
+        "en": "Non-B/IB Visa",
+        "th": "วีซ่า Non-B/IB"
+      },
+      "remarks": ""
+    },
+    {
+      "id": "documents-12",
+      "category": {
+        "zh": "泰国",
+        "en": "Thailand",
+        "th": "ประเทศไทย"
+      },
+      "name": {
+        "zh": "入境记录",
+        "en": "Entry record",
+        "th": "บันทึกการเข้าเมือง"
+      },
+      "remarks": ""
+    },
+    {
+      "id": "documents-13",
+      "category": {
+        "zh": "泰国",
+        "en": "Thailand",
+        "th": "ประเทศไทย"
+      },
+      "name": {
+        "zh": "停留许可",
+        "en": "Stay Permission",
+        "th": "สิทธิการอยู่ต่อ"
+      },
+      "remarks": ""
+    },
+    {
+      "id": "documents-14",
+      "category": {
+        "zh": "泰国",
+        "en": "Thailand",
+        "th": "ประเทศไทย"
+      },
+      "name": {
+        "zh": "工作许可/电子工作许可",
+        "en": "Work Permit / Digital Work Permit",
+        "th": "ใบอนุญาตทำงาน/ใบอนุญาตทำงานดิจิทัล"
+      },
+      "remarks": ""
+    },
+    {
+      "id": "documents-15",
+      "category": {
+        "zh": "出境",
+        "en": "Departure",
+        "th": "การเดินทางออก"
+      },
+      "name": {
+        "zh": "再入境许可",
+        "en": "Re-entry",
+        "th": "ใบอนุญาตกลับเข้าประเทศ"
+      },
+      "remarks": ""
+    },
+    {
+      "id": "documents-16",
+      "category": {
+        "zh": "家属",
+        "en": "Dependants",
+        "th": "ผู้ติดตาม"
+      },
+      "name": {
+        "zh": "家属签证/停留",
+        "en": "Family Visa / Stay",
+        "th": "วีซ่า/สิทธิอยู่ต่อของผู้ติดตาม"
+      },
+      "remarks": ""
+    }
+  ],
+  "positions": [
+    {
+      "id": "positions-1",
+      "no": 1,
+      "title": {
+        "zh": "总经理",
+        "en": "General Manager",
+        "th": "ผู้จัดการทั่วไป"
+      },
+      "recommended": 1,
+      "department": {
+        "zh": "管理",
+        "en": "Management",
+        "th": "บริหาร"
+      },
+      "responsibilities": {
+        "zh": "工厂经营管理",
+        "en": "Factory operations management",
+        "th": "การบริหารจัดการโรงงาน"
+      },
+      "requirements": "",
+      "status": {
+        "zh": "待申请",
+        "en": "Pending application",
+        "th": "รอยื่นคำขอ"
+      },
+      "remarks": "",
+      "approved": null,
+      "approvalDate": "",
+      "owner": ""
+    },
+    {
+      "id": "positions-2",
+      "no": 2,
+      "title": {
+        "zh": "工厂经理",
+        "en": "Factory Manager",
+        "th": "ผู้จัดการโรงงาน"
+      },
+      "recommended": 1,
+      "department": {
+        "zh": "制造",
+        "en": "Manufacturing",
+        "th": "การผลิต"
+      },
+      "responsibilities": {
+        "zh": "工厂运营",
+        "en": "Factory operations",
+        "th": "การดำเนินงานโรงงาน"
+      },
+      "requirements": "",
+      "status": {
+        "zh": "待申请",
+        "en": "Pending application",
+        "th": "รอยื่นคำขอ"
+      },
+      "remarks": "",
+      "approved": null,
+      "approvalDate": "",
+      "owner": ""
+    },
+    {
+      "id": "positions-3",
+      "no": 3,
+      "title": {
+        "zh": "生产经理",
+        "en": "Production Manager",
+        "th": "ผู้จัดการฝ่ายผลิต"
+      },
+      "recommended": 1,
+      "department": {
+        "zh": "生产",
+        "en": "Production",
+        "th": "ฝ่ายผลิต"
+      },
+      "responsibilities": {
+        "zh": "生产计划/效率/现场",
+        "en": "Production planning / efficiency / shopfloor",
+        "th": "การวางแผนการผลิต/ประสิทธิภาพ/หน้างาน"
+      },
+      "requirements": "",
+      "status": {
+        "zh": "待申请",
+        "en": "Pending application",
+        "th": "รอยื่นคำขอ"
+      },
+      "remarks": "",
+      "approved": null,
+      "approvalDate": "",
+      "owner": ""
+    },
+    {
+      "id": "positions-4",
+      "no": 4,
+      "title": {
+        "zh": "工程经理",
+        "en": "Engineering Manager",
+        "th": "ผู้จัดการฝ่ายวิศวกรรม"
+      },
+      "recommended": 1,
+      "department": {
+        "zh": "工程",
+        "en": "Engineering",
+        "th": "วิศวกรรม"
+      },
+      "responsibilities": {
+        "zh": "工程/设备/工艺导入",
+        "en": "Engineering / equipment / process introduction",
+        "th": "วิศวกรรม/อุปกรณ์/การนำกระบวนการมาใช้"
+      },
+      "requirements": "",
+      "status": {
+        "zh": "待申请",
+        "en": "Pending application",
+        "th": "รอยื่นคำขอ"
+      },
+      "remarks": "",
+      "approved": null,
+      "approvalDate": "",
+      "owner": ""
+    },
+    {
+      "id": "positions-5",
+      "no": 5,
+      "title": {
+        "zh": "质量经理",
+        "en": "Quality Manager",
+        "th": "ผู้จัดการฝ่ายคุณภาพ"
+      },
+      "recommended": 1,
+      "department": {
+        "zh": "质量",
+        "en": "Quality",
+        "th": "คุณภาพ"
+      },
+      "responsibilities": {
+        "zh": "QA/QC/客户质量",
+        "en": "QA/QC / customer quality",
+        "th": "QA/QC/คุณภาพลูกค้า"
+      },
+      "requirements": "",
+      "status": {
+        "zh": "待申请",
+        "en": "Pending application",
+        "th": "รอยื่นคำขอ"
+      },
+      "remarks": "",
+      "approved": null,
+      "approvalDate": "",
+      "owner": ""
+    },
+    {
+      "id": "positions-6",
+      "no": 6,
+      "title": {
+        "zh": "供应链经理",
+        "en": "Supply Chain Manager",
+        "th": "ผู้จัดการฝ่ายห่วงโซ่อุปทาน"
+      },
+      "recommended": 1,
+      "department": {
+        "zh": "供应链",
+        "en": "Supply chain",
+        "th": "ห่วงโซ่อุปทาน"
+      },
+      "responsibilities": {
+        "zh": "采购/物流/供应链",
+        "en": "Procurement / logistics / supply chain",
+        "th": "จัดซื้อ/โลจิสติกส์/ห่วงโซ่อุปทาน"
+      },
+      "requirements": "",
+      "status": {
+        "zh": "待申请",
+        "en": "Pending application",
+        "th": "รอยื่นคำขอ"
+      },
+      "remarks": "",
+      "approved": null,
+      "approvalDate": "",
+      "owner": ""
+    },
+    {
+      "id": "positions-7",
+      "no": 7,
+      "title": {
+        "zh": "生产/工艺工程师",
+        "en": "Production / Process Engineer",
+        "th": "วิศวกรการผลิต/กระบวนการ"
+      },
+      "recommended": 4,
+      "department": {
+        "zh": "工程",
+        "en": "Engineering",
+        "th": "วิศวกรรม"
+      },
+      "responsibilities": {
+        "zh": "工艺/IE/量产导入",
+        "en": "Process / IE / mass-production launch",
+        "th": "กระบวนการ/IE/เริ่มการผลิตจำนวนมาก"
+      },
+      "requirements": "",
+      "status": {
+        "zh": "待申请",
+        "en": "Pending application",
+        "th": "รอยื่นคำขอ"
+      },
+      "remarks": "",
+      "approved": null,
+      "approvalDate": "",
+      "owner": ""
+    },
+    {
+      "id": "positions-8",
+      "no": 8,
+      "title": {
+        "zh": "研发/产品工程师",
+        "en": "R&D / Product Engineer",
+        "th": "วิศวกรวิจัยและพัฒนา/ผลิตภัณฑ์"
+      },
+      "recommended": 4,
+      "department": {
+        "zh": "研发",
+        "en": "R&D",
+        "th": "วิจัยและพัฒนา"
+      },
+      "responsibilities": {
+        "zh": "产品/结构/电气",
+        "en": "Product / structure / electrical",
+        "th": "ผลิตภัณฑ์/โครงสร้าง/ไฟฟ้า"
+      },
+      "requirements": "",
+      "status": {
+        "zh": "待申请",
+        "en": "Pending application",
+        "th": "รอยื่นคำขอ"
+      },
+      "remarks": "",
+      "approved": null,
+      "approvalDate": "",
+      "owner": ""
+    },
+    {
+      "id": "positions-9",
+      "no": 9,
+      "title": {
+        "zh": "工装/自动化/设备工程师",
+        "en": "Tooling / Automation / Equipment Engineer",
+        "th": "วิศวกรแม่พิมพ์/ระบบอัตโนมัติ/อุปกรณ์"
+      },
+      "recommended": 6,
+      "department": {
+        "zh": "工程",
+        "en": "Engineering",
+        "th": "วิศวกรรม"
+      },
+      "responsibilities": {
+        "zh": "模具/自动化/设备",
+        "en": "Tooling / automation / equipment",
+        "th": "แม่พิมพ์/ระบบอัตโนมัติ/อุปกรณ์"
+      },
+      "requirements": "",
+      "status": {
+        "zh": "待申请",
+        "en": "Pending application",
+        "th": "รอยื่นคำขอ"
+      },
+      "remarks": "",
+      "approved": null,
+      "approvalDate": "",
+      "owner": ""
+    },
+    {
+      "id": "positions-10",
+      "no": 10,
+      "title": {
+        "zh": "质量工程师",
+        "en": "Quality Engineer",
+        "th": "วิศวกรคุณภาพ"
+      },
+      "recommended": 3,
+      "department": {
+        "zh": "质量",
+        "en": "Quality",
+        "th": "คุณภาพ"
+      },
+      "responsibilities": {
+        "zh": "质量工程/供应商质量",
+        "en": "Quality engineering / supplier quality",
+        "th": "วิศวกรรมคุณภาพ/คุณภาพซัพพลายเออร์"
+      },
+      "requirements": "",
+      "status": {
+        "zh": "待申请",
+        "en": "Pending application",
+        "th": "รอยื่นคำขอ"
+      },
+      "remarks": "",
+      "approved": null,
+      "approvalDate": "",
+      "owner": ""
+    },
+    {
+      "id": "positions-11",
+      "no": 11,
+      "title": {
+        "zh": "项目/培训专家",
+        "en": "Project / Training Expert",
+        "th": "ผู้เชี่ยวชาญโครงการ/ฝึกอบรม"
+      },
+      "recommended": {
+        "zh": "按需",
+        "en": "As required",
+        "th": "ตามความจำเป็น"
+      },
+      "department": {
+        "zh": "项目",
+        "en": "Project",
+        "th": "โครงการ"
+      },
+      "responsibilities": {
+        "zh": "安装调试/培训/技术转移",
+        "en": "Installation / commissioning / training / technology transfer",
+        "th": "ติดตั้ง/ทดสอบเดินเครื่อง/ฝึกอบรม/ถ่ายทอดเทคโนโลยี"
+      },
+      "requirements": "",
+      "status": {
+        "zh": "待申请",
+        "en": "Pending application",
+        "th": "รอยื่นคำขอ"
+      },
+      "remarks": "",
+      "approved": null,
+      "approvalDate": "",
+      "owner": ""
+    }
+  ],
+  "batches": [
+    {
+      "id": "batches-1",
+      "title": {
+        "zh": "第1批",
+        "en": "Batch 1",
+        "th": "ชุดที่ 1"
+      },
+      "category": {
+        "zh": "管理层",
+        "en": "Management",
+        "th": "ผู้บริหาร"
+      },
+      "recommended": "6–8",
+      "plannedStart": "",
+      "plannedEnd": "",
+      "stage": {
+        "zh": "职位规划",
+        "en": "Position planning",
+        "th": "การวางแผนตำแหน่ง"
+      },
+      "owner": {
+        "zh": "泰国HR",
+        "en": "Thailand HR",
+        "th": "HR ประเทศไทย"
+      },
+      "remarks": "",
+      "actualStart": "",
+      "actualEnd": "",
+      "progress": 0
+    },
+    {
+      "id": "batches-2",
+      "title": {
+        "zh": "第2批",
+        "en": "Batch 2",
+        "th": "ชุดที่ 2"
+      },
+      "category": {
+        "zh": "工程技术",
+        "en": "Engineering & technical",
+        "th": "วิศวกรรมและเทคนิค"
+      },
+      "recommended": "10–15",
+      "plannedStart": "",
+      "plannedEnd": "",
+      "stage": {
+        "zh": "职位规划",
+        "en": "Position planning",
+        "th": "การวางแผนตำแหน่ง"
+      },
+      "owner": {
+        "zh": "泰国HR",
+        "en": "Thailand HR",
+        "th": "HR ประเทศไทย"
+      },
+      "remarks": "",
+      "actualStart": "",
+      "actualEnd": "",
+      "progress": 0
+    },
+    {
+      "id": "batches-3",
+      "title": {
+        "zh": "第3批",
+        "en": "Batch 3",
+        "th": "ชุดที่ 3"
+      },
+      "category": {
+        "zh": "设备安装/调试",
+        "en": "Equipment installation & commissioning",
+        "th": "ติดตั้งและทดสอบเดินเครื่อง"
+      },
+      "recommended": "5–10",
+      "plannedStart": "",
+      "plannedEnd": "",
+      "stage": {
+        "zh": "职位规划",
+        "en": "Position planning",
+        "th": "การวางแผนตำแหน่ง"
+      },
+      "owner": {
+        "zh": "项目经理",
+        "en": "Project manager",
+        "th": "ผู้จัดการโครงการ"
+      },
+      "remarks": "",
+      "actualStart": "",
+      "actualEnd": "",
+      "progress": 0
+    },
+    {
+      "id": "batches-4",
+      "title": {
+        "zh": "第4批",
+        "en": "Batch 4",
+        "th": "ชุดที่ 4"
+      },
+      "category": {
+        "zh": "培训/技术转移",
+        "en": "Training & technology transfer",
+        "th": "ฝึกอบรมและถ่ายทอดเทคโนโลยี"
+      },
+      "recommended": {
+        "zh": "按需",
+        "en": "As required",
+        "th": "ตามความจำเป็น"
+      },
+      "plannedStart": "",
+      "plannedEnd": "",
+      "stage": {
+        "zh": "按项目",
+        "en": "By project",
+        "th": "ตามโครงการ"
+      },
+      "owner": {
+        "zh": "项目经理",
+        "en": "Project manager",
+        "th": "ผู้จัดการโครงการ"
+      },
+      "remarks": "",
+      "actualStart": "",
+      "actualEnd": "",
+      "progress": 0
+    }
+  ],
+  "budget": [
+    {
+      "id": "budget-1",
+      "employeeId": "",
+      "category": {
+        "zh": "Non-B/IB签证",
+        "en": "Non-B/IB Visa",
+        "th": "วีซ่า Non-B/IB"
+      },
+      "estimated": "",
+      "actual": "",
+      "paymentDate": "",
+      "vendor": "",
+      "status": {
+        "zh": "待预算",
+        "en": "Pending budget",
+        "th": "รอจัดทำงบประมาณ"
+      },
+      "remarks": "",
+      "quantity": null,
+      "unitCost": null,
+      "description": ""
+    },
+    {
+      "id": "budget-2",
+      "employeeId": "",
+      "category": {
+        "zh": "BOI/顾问服务",
+        "en": "BOI / consultancy service",
+        "th": "บริการ BOI/ที่ปรึกษา"
+      },
+      "estimated": "",
+      "actual": "",
+      "paymentDate": "",
+      "vendor": "",
+      "status": {
+        "zh": "待预算",
+        "en": "Pending budget",
+        "th": "รอจัดทำงบประมาณ"
+      },
+      "remarks": "",
+      "quantity": null,
+      "unitCost": null,
+      "description": ""
+    },
+    {
+      "id": "budget-3",
+      "employeeId": "",
+      "category": {
+        "zh": "入境局停留许可",
+        "en": "Immigration stay",
+        "th": "การขออยู่ต่อกับตรวจคนเข้าเมือง"
+      },
+      "estimated": "",
+      "actual": "",
+      "paymentDate": "",
+      "vendor": "",
+      "status": {
+        "zh": "待预算",
+        "en": "Pending budget",
+        "th": "รอจัดทำงบประมาณ"
+      },
+      "remarks": "",
+      "quantity": null,
+      "unitCost": null,
+      "description": ""
+    },
+    {
+      "id": "budget-4",
+      "employeeId": "",
+      "category": {
+        "zh": "工作许可/电子工作许可",
+        "en": "Work Permit / Digital WP",
+        "th": "ใบอนุญาตทำงาน/ดิจิทัล"
+      },
+      "estimated": "",
+      "actual": "",
+      "paymentDate": "",
+      "vendor": "",
+      "status": {
+        "zh": "待预算",
+        "en": "Pending budget",
+        "th": "รอจัดทำงบประมาณ"
+      },
+      "remarks": "",
+      "quantity": null,
+      "unitCost": null,
+      "description": ""
+    },
+    {
+      "id": "budget-5",
+      "employeeId": "",
+      "category": {
+        "zh": "再入境许可",
+        "en": "Re-entry",
+        "th": "ใบอนุญาตกลับเข้าประเทศ"
+      },
+      "estimated": "",
+      "actual": "",
+      "paymentDate": "",
+      "vendor": "",
+      "status": {
+        "zh": "待预算",
+        "en": "Pending budget",
+        "th": "รอจัดทำงบประมาณ"
+      },
+      "remarks": "",
+      "quantity": null,
+      "unitCost": null,
+      "description": ""
+    },
+    {
+      "id": "budget-6",
+      "employeeId": "",
+      "category": {
+        "zh": "翻译/认证",
+        "en": "Translation / certification",
+        "th": "การแปล/รับรอง"
+      },
+      "estimated": "",
+      "actual": "",
+      "paymentDate": "",
+      "vendor": "",
+      "status": {
+        "zh": "待预算",
+        "en": "Pending budget",
+        "th": "รอจัดทำงบประมาณ"
+      },
+      "remarks": "",
+      "quantity": null,
+      "unitCost": null,
+      "description": ""
+    },
+    {
+      "id": "budget-7",
+      "employeeId": "",
+      "category": {
+        "zh": "家属",
+        "en": "Dependants",
+        "th": "ผู้ติดตาม"
+      },
+      "estimated": "",
+      "actual": "",
+      "paymentDate": "",
+      "vendor": "",
+      "status": {
+        "zh": "待预算",
+        "en": "Pending budget",
+        "th": "รอจัดทำงบประมาณ"
+      },
+      "remarks": "",
+      "quantity": null,
+      "unitCost": null,
+      "description": ""
+    }
+  ],
+  "resources": [
+    {
+      "id": "resources-1",
+      "name": {
+        "zh": "BOI 外籍专家",
+        "en": "BOI Foreign Experts",
+        "th": "ผู้เชี่ยวชาญต่างชาติ BOI"
+      },
+      "url": "https://www.boi.go.th/en/procedure_to_bring_in_foreign_experts",
+      "purpose": {
+        "zh": "外籍技术人员/专家流程",
+        "en": "Foreign technician / expert process",
+        "th": "ขั้นตอนสำหรับช่างเทคนิค/ผู้เชี่ยวชาญต่างชาติ"
+      },
+      "authority": "BOI",
+      "provenance": "workbook",
+      "verified": true
+    },
+    {
+      "id": "resources-2",
+      "name": {
+        "zh": "BOI 单一窗口",
+        "en": "BOI Single Window",
+        "th": "BOI Single Window"
+      },
+      "url": "https://swe-expert.boi.go.th/main.php",
+      "purpose": {
+        "zh": "Visa & Work Permit在线系统",
+        "en": "Online Visa & Work Permit system",
+        "th": "ระบบออนไลน์ Visa & Work Permit"
+      },
+      "authority": "BOI",
+      "provenance": "workbook",
+      "verified": true
+    },
+    {
+      "id": "resources-3",
+      "name": {
+        "zh": "BOI 泰国工作指南",
+        "en": "BOI Working in Thailand",
+        "th": "การทำงานในประเทศไทยของ BOI"
+      },
+      "url": "https://www.boi.go.th/index.php?language=en&page=WorkinginThailand",
+      "purpose": {
+        "zh": "工作签证与工作许可说明",
+        "en": "Work visa and work permit guidance",
+        "th": "คำแนะนำวีซ่าทำงานและใบอนุญาตทำงาน"
+      },
+      "authority": "BOI",
+      "provenance": "workbook",
+      "verified": true
+    },
+    {
+      "id": "resources-4",
+      "name": {
+        "zh": "单一窗口操作手册",
+        "en": "Single Window Manual",
+        "th": "คู่มือ Single Window"
+      },
+      "url": "https://swe-expert.boi.go.th/main.php?filename=sw_manual",
+      "purpose": {
+        "zh": "系统操作手册",
+        "en": "System user manual",
+        "th": "คู่มือการใช้งานระบบ"
+      },
+      "authority": "BOI",
+      "provenance": "workbook",
+      "verified": true
+    },
+    {
+      "id": "research-0",
+      "name": {
+        "en": "BOI Por.8/2568",
+        "zh": "BOI 第 Por.8/2568 号公告",
+        "th": "ประกาศ BOI ป.8/2568"
+      },
+      "purpose": {
+        "en": "Position, placement and extension criteria. Government-hosted unofficial English translation; confirm the Thai original.",
+        "zh": "职位、人员及延期标准。政府发布的非官方英译；请核对泰文原文。",
+        "th": "เกณฑ์ตำแหน่ง บรรจุ และขยายเวลา ฉบับแปลอังกฤษไม่เป็นทางการ โปรดตรวจสอบต้นฉบับไทย"
+      },
+      "url": "https://www.boi.go.th/upload/content/por8_2568EN.pdf",
+      "authority": "BOI",
+      "provenance": "research",
+      "verified": true
+    },
+    {
+      "id": "research-1",
+      "name": {
+        "en": "Department of Employment",
+        "zh": "泰国就业厅",
+        "th": "กรมการจัดหางาน"
+      },
+      "purpose": {
+        "en": "Work permit services; confirm the applicable BOI channel.",
+        "zh": "工作许可服务；请确认适用的 BOI 渠道。",
+        "th": "บริการใบอนุญาตทำงาน โปรดยืนยันช่องทาง BOI ที่เกี่ยวข้อง"
+      },
+      "url": "https://eworkpermit.doe.go.th/Home",
+      "authority": "DOE",
+      "provenance": "research",
+      "verified": true
+    },
+    {
+      "id": "research-2",
+      "name": {
+        "en": "Immigration re-entry handbook",
+        "zh": "移民局再入境手册",
+        "th": "คู่มือการขอกลับเข้าประเทศ"
+      },
+      "purpose": {
+        "en": "Re-entry procedure. Check current forms and office requirements.",
+        "zh": "再入境程序。请确认最新表格及主管机关要求。",
+        "th": "ขั้นตอนกลับเข้าประเทศ โปรดตรวจสอบแบบฟอร์มและข้อกำหนดล่าสุด"
+      },
+      "url": "https://www.immigration.go.th/citizen_manual/guid_en5.pdf",
+      "authority": "Immigration Bureau",
+      "provenance": "research",
+      "verified": true
+    },
+    {
+      "id": "research-3",
+      "name": {
+        "en": "Chengdu B / IB visa FAQ",
+        "zh": "成都领馆 B / IB 签证问答",
+        "th": "คำถามวีซ่า B / IB สถานกงสุลเฉิงตู"
+      },
+      "purpose": {
+        "en": "China-based consular guidance; requirements depend on jurisdiction and purpose.",
+        "zh": "驻华领事指导；要求取决于领区和目的。",
+        "th": "คำแนะนำกงสุลในจีน ข้อกำหนดขึ้นอยู่กับเขตอำนาจและวัตถุประสงค์"
+      },
+      "url": "https://chengdu.thaiembassy.org/th/content/business-or-employment-visa-non-immigrant-b-ib?menu=68db8e1aae8d891b84392313&page=68db98b312577f346474c7c4",
+      "authority": "Royal Thai Consulate-General, Chengdu",
+      "provenance": "research",
+      "verified": true
+    }
+  ],
+  "notices": [
+    {
+      "name": {
+        "en": "2026 Single Window updates",
+        "zh": "2026 年 Single Window 更新",
+        "th": "ข้อมูลปรับปรุง Single Window ปี 2026"
+      },
+      "text": {
+        "en": "Review current TIESC Digital Work Permit steps and extension income-evidence notices before submission. Procedures vary by application.",
+        "zh": "提交前请查看 TIESC 数字工作许可流程及延期收入证明通知。流程因申请而异。",
+        "th": "ตรวจสอบขั้นตอนใบอนุญาตทำงานดิจิทัล TIESC และประกาศหลักฐานรายได้ก่อนยื่น ขั้นตอนต่างกันตามคำขอ"
+      },
+      "url": "https://swe-expert.boi.go.th/main.php"
+    }
+  ]
+}

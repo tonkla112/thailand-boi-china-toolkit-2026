@@ -1,0 +1,6 @@
+*.xlsx
+.DS_Store
+node_modules/
+dist/
+docs/workbook-inspection.txt
+test-results/
