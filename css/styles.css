@@ -1433,3 +1433,30 @@ dialog > details {
     scroll-behavior: auto !important;
   }
 }
+
+.local-dashboard-shortcut {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 24px 0;
+  padding: 22px;
+  background: white;
+  border: 1px solid #dce6df;
+  border-radius: 10px;
+}
+.local-dashboard-shortcut p {
+  margin: 7px 0 0;
+  color: #647b78;
+  font-size: 13px;
+}
+.local-dashboard-shortcut .button {
+  flex-shrink: 0;
+  text-decoration: none;
+}
+@media (max-width: 700px) {
+  .local-dashboard-shortcut {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

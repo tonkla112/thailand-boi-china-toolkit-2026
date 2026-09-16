@@ -1,6 +1,24 @@
 export const dictionary = {};
 const add = (key, en, zh, th) => (dictionary[key] = { en, zh, th });
 const rows = [
+  [
+    "privateDashboard",
+    "Your private BOI workspace",
+    "您的私密 BOI 工作区",
+    "พื้นที่ทำงาน BOI ส่วนตัว",
+  ],
+  [
+    "openPrivateDashboard",
+    "Open private BOI dashboard",
+    "打开私密 BOI 仪表盘",
+    "เปิดแดชบอร์ด BOI ส่วนตัว",
+  ],
+  [
+    "privateDashboardHelp",
+    "On this Mac only. Start Open BOI Dashboard.command first to run the app and sign in to this browser.",
+    "仅限此 Mac。请先运行 Open BOI Dashboard.command，启动应用并登录此浏览器。",
+    "ใช้บน Mac เครื่องนี้เท่านั้น เปิด Open BOI Dashboard.command ก่อนเพื่อเริ่มแอปและเข้าสู่ระบบในเบราว์เซอร์นี้",
+  ],
   ["dashboard", "Dashboard", "仪表板", "แดชบอร์ด"],
   ["employees", "Employees", "员工管理", "พนักงาน"],
   ["documents", "Document Checklist", "材料清单", "รายการเอกสาร"],
