@@ -1,4 +1,3 @@
-import { offsetDate } from "./domain.js";
 const KEY = "boi-toolkit-demo-v1";
 export class Repository {
   async load() {
@@ -20,6 +19,10 @@ export class Repository {
       saved.history
     ) {
       this.state = saved;
+      if (!saved.sampleCleanupVersion) {
+        this.removeSamples();
+        this.save();
+      }
     } else {
       this.state = this.seed();
       if (saved) this.warning = true;
@@ -28,78 +31,51 @@ export class Repository {
   }
   seed() {
     const data = structuredClone(this.template);
-    const statuses = [
-      "wpIssued",
-      "processing",
-      "approved",
-      "renewing",
-      "pending",
-      "entered",
-      "wpIssued",
-      "processing",
-      "wpIssued",
-      "left",
-      "processing",
-      "pending",
-    ];
-    const employees = statuses.map((status, i) => {
-      const p = data.positions[i % data.positions.length];
-      return {
-        id: "DEMO-" + String(i + 1).padStart(3, "0"),
-        no: i + 1,
-        name: "DEMO " + String(i + 1).padStart(3, "0"),
-        englishName: "Sample Employee " + String(i + 1).padStart(3, "0"),
-        passport: "DEMO-NOT-A-PASSPORT-" + (i + 1),
-        nationality: { en: "Chinese", zh: "中国", th: "จีน" },
-        department: p.department,
-        position: p.title,
-        positionId: "",
-        location: {
-          en: "Demo Thailand office",
-          zh: "泰国演示办公室",
-          th: "สำนักงานตัวอย่างประเทศไทย",
-        },
-        startDate: offsetDate(-120 + i * 5),
-        positionApprovalDate: "",
-        personnelApprovalDate: "",
-        visaExpiry: i % 4 === 0 ? offsetDate(20 + i * 7) : "",
-        stayExpiry:
-          i % 3 === 0 ? offsetDate(-4 + i * 8) : offsetDate(110 + i * 5),
-        wpExpiry:
-          status === "wpIssued" || status === "renewing"
-            ? offsetDate(15 + i * 16)
-            : "",
-        passportExpiry: offsetDate(300 + i * 35),
-        reentry: "unknown",
-        dependants: "none",
-        owner: i % 2 ? "ownerProject" : "ownerHR",
-        status,
-        remarks: "",
-      };
-    });
-    const employeeDocuments = {};
-    for (const [i, e] of employees.entries())
-      for (const [j, d] of data.documents.entries())
-        employeeDocuments[e.id + ":" + d.id] = {
-          status:
-            j < 5 + (i % 8)
-              ? "complete"
-              : j === 14
-                ? "notApplicable"
-                : j % 3 === 0
-                  ? "missing"
-                  : "requested",
-          remarks: "",
-        };
     return {
       ...data,
       version: 1,
-      employees,
-      employeeDocuments,
+      employees: [],
+      employeeDocuments: {},
+      positions: [],
+      batches: [],
+      budget: [],
+      sampleCleanupVersion: 1,
       renewalActions: {},
       changes: [],
       history: [],
     };
+  }
+  removeSamples() {
+    const removed = new Set(
+      this.state.employees
+        .filter((e) => /^DEMO-\d+$/.test(e.id))
+        .map((e) => e.id),
+    );
+    this.state.employees = this.state.employees.filter(
+      (e) => !removed.has(e.id),
+    );
+    for (const key of ["employeeDocuments", "renewalActions"])
+      this.state[key] = Object.fromEntries(
+        Object.entries(this.state[key]).filter(
+          ([id]) => !removed.has(id.split(":")[0]),
+        ),
+      );
+    this.state.history = this.state.history.filter(
+      (row) => !removed.has(row.employeeId),
+    );
+    this.state.changes = (this.state.changes || []).filter(
+      (row) => !removed.has(row.employeeId),
+    );
+    for (const key of ["positions", "batches", "budget"]) {
+      const samples = this.template[key] || [];
+      this.state[key] = (this.state[key] || []).filter(
+        (row) =>
+          !samples.some(
+            (sample) => JSON.stringify(sample) === JSON.stringify(row),
+          ),
+      );
+    }
+    this.state.sampleCleanupVersion = 1;
   }
   save() {
     try {

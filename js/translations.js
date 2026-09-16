@@ -90,12 +90,12 @@ const rows = [
     "清晰掌握人员、许可与下一步行动。",
     "ติดตามพนักงาน ใบอนุญาต และสิ่งที่ต้องดำเนินการ",
   ],
-  ["demo", "DEMO WORKSPACE", "演示工作区", "พื้นที่สาธิต"],
+  ["demo", "PUBLIC TOOLKIT", "公共工具包", "ชุดเครื่องมือสาธารณะ"],
   [
     "demoNote",
-    "Synthetic employees · Changes saved only in this browser. Do not enter confidential data.",
-    "虚构员工 · 更改仅保存在此浏览器中。请勿输入机密数据。",
-    "พนักงานสมมติ · บันทึกเฉพาะเบราว์เซอร์นี้ ห้ามกรอกข้อมูลลับ",
+    "Use the private dashboard for real employee records. This public toolkit stores changes only in this browser.",
+    "请在私密仪表盘中管理真实员工。公共工具包的更改仅保存在此浏览器。",
+    "ใช้แดชบอร์ดส่วนตัวสำหรับข้อมูลพนักงานจริง เครื่องมือสาธารณะบันทึกการเปลี่ยนแปลงเฉพาะเบราว์เซอร์นี้",
   ],
   [
     "sourceNote",
@@ -407,7 +407,12 @@ const rows = [
   ],
   ["recordCount", "records", "条记录", "รายการ"],
   ["asOf", "As of", "截至", "ข้อมูล ณ"],
-  ["demoData", "Synthetic demo data", "虚构演示数据", "ข้อมูลสาธิตสมมติ"],
+  [
+    "demoData",
+    "Browser workspace",
+    "浏览器工作区",
+    "พื้นที่ทำงานในเบราว์เซอร์",
+  ],
   ["allDates", "All expiry dates", "所有到期日", "วันหมดอายุทั้งหมด"],
   [
     "approvalUnknown",
