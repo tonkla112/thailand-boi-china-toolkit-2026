@@ -1460,3 +1460,96 @@ dialog > details {
     flex-direction: column;
   }
 }
+/* Keep decisions and deadlines ahead of background reporting. */
+.nav-group summary {
+  cursor: pointer;
+  padding: 17px 16px;
+  color: #d4e4df;
+  font-weight: 600;
+  border-radius: 7px;
+}
+.nav-group summary:hover {
+  background: #24484b;
+}
+.nav-group .nav-item {
+  margin-left: 14px;
+  padding-block: 12px;
+  font-size: 12px;
+}
+.heading-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+}
+.heading-action small {
+  max-width: 310px;
+  color: #526b67;
+  font-size: 11px;
+  text-align: right;
+}
+.page-heading {
+  margin-bottom: 18px;
+}
+.page-heading h1 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+.page-heading p,
+.panel-sub {
+  color: #566e68;
+}
+.priority-metrics {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 20px;
+}
+.metric-link {
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s;
+}
+.metric-link:hover {
+  border-color: #287e6c;
+  text-decoration: none;
+}
+.metric-link:focus-visible {
+  outline: 3px solid #287e6c;
+  outline-offset: 3px;
+}
+.metric-link.urgent strong {
+  color: #b23b36;
+}
+.metric > span,
+.metric small,
+th {
+  color: #556b65;
+}
+.readiness-summary {
+  padding: 4px 25px 26px;
+}
+.readiness-summary > strong {
+  font-size: 38px;
+  color: #a45e24;
+}
+.readiness-summary h3 {
+  margin: 3px 0;
+}
+.readiness-summary p {
+  color: #566e68;
+}
+@media (max-width: 800px) {
+  .priority-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .heading-action {
+    align-items: flex-start;
+  }
+  .heading-action small {
+    text-align: left;
+  }
+}
+@media (max-width: 500px) {
+  .page-heading h1 {
+    font-size: 26px;
+  }
+}

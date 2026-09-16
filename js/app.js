@@ -128,33 +128,74 @@ function navigate(next) {
 }
 function shell() {
   const alerts = renewals(state).filter((r) => r.days <= 60).length;
-  return `<aside id="sidebar"><a class="brand" href="#dashboard"><span class="brand-mark">T<span>+</span></span><div>THAILAND BOI<small>${t("workspace")}</small></div></a><div class="workspace-tag"><span class="live-dot"></span>${t("demo")}<span>2026</span></div><nav aria-label="${t("menu")}">${routes.map((r, i) => `<a href="#${r}" class="nav-item ${route === r ? "active" : ""}" ${route === r ? 'aria-current="page"' : ""}><span class="nav-icon" aria-hidden="true">${icons[i]}</span>${t(r)}${r === "renewals" && alerts ? `<b>${alerts}</b>` : ""}</a>`).join("")}</nav><div class="sidebar-bottom"><span class="avatar">HR</span><div>${t("ownerHR")}<small>${t("demoData")}</small></div></div></aside><div class="main-shell"><header><div class="header-left"><button id="menu" class="icon-button" aria-label="${t("menu")}" aria-expanded="false">☰</button><span class="breadcrumb">${t("workspace")} <span>/</span> <b>${t(route)}</b></span></div><div class="header-right"><select id="language" aria-label="${t("language")}">${options(
+  return `<aside id="sidebar"><a class="brand" href="#dashboard"><span class="brand-mark">T<span>+</span></span><div>THAILAND BOI<small>${t("workspace")}</small></div></a><div class="workspace-tag"><span class="live-dot"></span>${t("demo")}<span>2026</span></div><nav aria-label="${t("menu")}">${[
+    ["overviewNav", ["dashboard"]],
+    ["peopleNav", ["employees", "changes"]],
+    ["applicationsNav", ["documents", "positions"]],
+    ["planningNav", ["batches", "renewals", "budget"]],
+    ["resourcesNav", ["resources"]],
+  ]
+    .map(([name, children]) =>
+      children.length === 1
+        ? `<a class="nav-item ${route === children[0] ? "active" : ""}" href="#${children[0]}" ${route === children[0] ? 'aria-current="page"' : ""}>${t(name)}</a>`
+        : `<details class="nav-group" ${children.includes(route) ? "open" : ""}><summary>${t(name)}</summary>${children.map((r) => `<a class="nav-item ${route === r ? "active" : ""}" href="#${r}" ${route === r ? 'aria-current="page"' : ""}>${t(r)}</a>`).join("")}</details>`,
+    )
+    .join(
+      "",
+    )}</nav><div class="sidebar-bottom"><span class="avatar">HR</span><div>${t("ownerHR")}<small>${t("demoData")}</small></div></div></aside><div class="main-shell"><header><div class="header-left"><button id="menu" class="icon-button" aria-label="${t("menu")}" aria-expanded="false">☰</button><span class="breadcrumb">${t("workspace")} <span>/</span> <b>${t(route)}</b></span></div><div class="header-right"><select id="language" aria-label="${t("language")}">${options(
     [
       ["en", "EN · English"],
       ["zh", "中文"],
       ["th", "ไทย"],
     ],
     language,
-  )}</select><button class="icon-button notification" data-nav="renewals" aria-label="${t("renewals")}">◴<i>${alerts}</i></button><span class="avatar small-avatar">HR</span></div></header><main id="main"><div class="page-heading"><div><div class="eyebrow">THAILAND · BOI · 2026</div><h1>${route === "dashboard" ? t("overview") : t(route)}</h1><p>${route === "dashboard" ? t("overviewSub") : route === "employees" ? t("appName") : route === "resources" ? t("reviewed") : t("sourceNote")}</p></div><div class="heading-action">${route === "employees" ? `<button class="button primary" data-edit="employees" data-id="">+ ${t("addEmployee")}</button>` : route === "changes" ? `<button class="button primary" data-edit="changes" data-id="">+ ${t("add")}</button>` : `<span class="today">${t("asOf")} ${date(today())}</span>`}</div></div><div class="demo-banner"><span class="demo-pill">${t("demo")}</span><span>${t("demoNote")}</span><button class="text-button" id="reset">${t("reset")} ↺</button></div>${route === "dashboard" ? `<section class="local-dashboard-shortcut"><div><strong>${t("privateDashboard")}</strong><p>${t("privateDashboardHelp")}</p></div><a class="button primary" href="http://127.0.0.1:4180/" target="_blank" rel="noopener noreferrer">${t("openPrivateDashboard")} ↗</a></section>` : ""}<div id="content"></div><footer>${t("appName")}<span>${t("asOf")} ${date(today())} · Asia/Bangkok</span></footer></main></div>`;
+  )}</select><button class="icon-button notification" data-nav="renewals" aria-label="${t("renewals")}">◴<i>${alerts}</i></button><span class="avatar small-avatar">HR</span></div></header><main id="main"><div class="page-heading"><div><div class="eyebrow">THAILAND · BOI · 2026</div><h1>${route === "dashboard" ? t("overview") : t(route)}</h1><p>${route === "dashboard" ? t("overviewSub") : route === "employees" ? t("appName") : route === "resources" ? t("reviewed") : t("sourceNote")}</p></div><div class="heading-action">${route === "dashboard" ? `<a class="button primary" href="http://127.0.0.1:4180/" target="_blank" rel="noopener noreferrer">${t("openPrivateDashboard")} ↗</a><small>${t("localLaunchHint")}</small>` : route === "employees" ? `<button class="button primary" data-edit="employees" data-id="">+ ${t("addEmployee")}</button>` : route === "changes" ? `<button class="button primary" data-edit="changes" data-id="">+ ${t("add")}</button>` : `<span class="today">${t("todayLabel")} ${date(today())}</span>`}</div></div><div class="demo-banner"><span class="demo-pill">${t("demo")}</span><span>${t("demoNote")}</span><button class="text-button" id="reset">${t("reset")} ↺</button></div><div id="content"></div><footer>${t("appName")}<span>${t("todayLabel")} ${date(today())} · Asia/Bangkok</span></footer></main></div>`;
 }
 function dashboard() {
-  const r = renewals(state),
-    within = (k) =>
-      r.filter((x) => x.item === k && x.days >= 0 && x.days <= 30).length;
-  const active = state.employees;
-  const count = (s) => active.filter((e) => e.status === s).length;
-  const allDone = active.map((e) => completion(state, e.id));
-  const sum = allDone.reduce((a, p) => a + p.done, 0),
-    total = allDone.reduce((a, p) => a + p.total, 0);
-  return `<div class="metrics">${metric(t("totalEmployees"), active.length, t("demoData"))}${metric(t("inProgress"), count("processing"), t("processing"), "teal")}${metric(t("wpIssued"), count("wpIssued"), t("status"), "teal")}${metric(t("visa30"), within("visaExpiry"), t("red"))}${metric(t("stay30"), within("stayExpiry"), t("red"), "warning")}${metric(t("wp30"), within("wpExpiry"), t("red"), "warning")}</div><div class="dashboard-grid"><div>${section(t("actionRequired"), `<p class="panel-sub">${t("expirySub")}</p>${renewalTable(r.filter((x) => x.days <= 60).slice(0, 5), true)}`, `<button class="text-button" data-nav="renewals">${t("viewAll")} →</button>`)}</div><div class="readiness">${section(t("documentProgress"), `<div class="ring" style="--percent:${total ? (sum / total) * 100 : 0}"><div><strong>${total ? Math.round((sum / total) * 100) : 0}<small>%</small></strong><span>${t("complete")}</span></div></div><div class="readiness-foot"><b>${sum} / ${total}</b><span>${t("documents")}</span></div><button class="button full" data-nav="documents">${t("viewAll")} →</button>`)}</div></div><div class="two-columns">${section(t("statusChart"), `<div class="chart">${statuses.map((s) => `<div class="chart-row"><span>${text(s)}</span><div><i style="width:${active.length ? (count(s) / active.length) * 100 : 0}%"></i></div><b>${count(s)}</b></div>`).join("")}</div>`)}${section(
-    t("departmentChart"),
-    `<div class="chart">${[...new Set(active.map((e) => local(e.department)))]
-      .map((dep) => {
-        let n = active.filter((e) => local(e.department) === dep).length;
-        return `<div class="chart-row"><span>${esc(dep)}</span><div><i style="width:${active.length ? (n / active.length) * 100 : 0}%"></i></div><b>${n}</b></div>`;
-      })
+  const active = state.employees.filter((e) => e.status !== "left");
+  const ids = new Set(active.map((e) => e.id));
+  const r = renewals(state).filter((r) => ids.has(r.employeeId));
+  const overdue = r.filter((r) => r.days < 0);
+  const upcoming = r.filter((r) => r.days >= 0 && r.days <= 30);
+  const missing = active.flatMap((e) =>
+    state.documents
+      .filter((d) =>
+        ["missing", "expired"].includes(
+          state.employeeDocuments[e.id + ":" + d.id]?.status,
+        ),
+      )
+      .map((d) => ({ e, d })),
+  );
+  const affected = new Set(missing.map(({ e }) => e.id)).size;
+  const count = (status) => active.filter((e) => e.status === status).length;
+  const card = (title, value, sub, dest, tone = "") =>
+    `<a class="metric metric-link ${tone}" href="#${dest}"><span>${t(title)}</span><strong>${value}</strong><small>${sub} →</small></a>`;
+  const scope = (rows) =>
+    `${rows.length} ${t("deadlinesLabel")} · ${new Set(rows.map((r) => r.employeeId)).size} ${t("employees")}`;
+  const actions = r
+    .filter((r) => r.days <= 30)
+    .slice(0, 6)
+    .map((r) => [
+      employeeLink(r.employeeId),
+      label("employees", r.item),
+      text(r.owner) || t("unknown"),
+      date(r.expiry),
+      badge(r.alert),
+      `<button class="button small" data-renewal="${esc(r.id)}">${t("reviewAction")}</button>`,
+    ]);
+  const completions = active.map((e) => completion(state, e.id));
+  const done = completions.reduce((sum, c) => sum + c.done, 0),
+    total = completions.reduce((sum, c) => sum + c.total, 0);
+  return `<div class="metrics priority-metrics">${card("overdueItems", overdue.length, scope(overdue), "renewals", "urgent")}${card("due30", upcoming.length, scope(upcoming), "renewals", "warning")}${card("documentCases", affected, t("missingExpired"), "documents")}${card("inProgress", count("processing"), t("employeeCases"), "employees")}</div><div class="dashboard-grid"><div>${section(t("priorityActions"), `<p class="panel-sub">${t("priorityHelp")}</p>${table([t("employee"), t("item"), t("owner"), t("expiry"), t("alert"), t("actions")], actions)}`, `<button class="text-button" data-nav="renewals">${t("viewAll")} →</button>`)}</div><div>${section(t("upcomingDeadlines"), `<p class="panel-sub">${t("due30")}</p>${renewalTable(upcoming.slice(0, 4), true)}`)}</div></div><div class="two-columns">${section(t("documentProgress"), `<div class="readiness-summary"><strong>${missing.length}</strong><h3>${t("missingExpired")}</h3><p>${affected} ${t("employees")} · ${done} / ${total} ${t("complete")}</p><button class="button" data-nav="documents">${t("reviewDocuments")} →</button></div>`)}${section(
+    t("statusChart"),
+    `<p class="panel-sub">${t("totalEmployees")}: ${active.length} · ${t("wpIssued")}: ${count("wpIssued")}</p><div class="chart">${statuses
+      .filter((s) => s !== "left")
+      .map(
+        (status) =>
+          `<div class="chart-row"><span>${text(status)}</span><div><i style="width:${active.length ? (count(status) / active.length) * 100 : 0}%"></i></div><b>${count(status)}</b></div>`,
+      )
       .join("")}</div>`,
-  )}</div><div class="resource-callout"><span class="resource-icon">↗</span><div><b>${text(state.notices[0].name)}</b><p>${text(state.notices[0].text)}</p></div><button class="button" data-nav="resources">${t("resources")} →</button></div>`;
+  )}</div>`;
 }
 function renewalTable(rows, compact = false) {
   return table(

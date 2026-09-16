@@ -1,6 +1,44 @@
 export const dictionary = {};
 const add = (key, en, zh, th) => (dictionary[key] = { en, zh, th });
 const rows = [
+  ["todayLabel", "Today", "今天", "วันนี้"],
+  ["overviewNav", "Overview", "总览", "ภาพรวม"],
+  ["peopleNav", "People", "人员", "บุคลากร"],
+  ["applicationsNav", "Applications", "申请", "คำขอ"],
+  ["planningNav", "Planning", "计划", "การวางแผน"],
+  ["resourcesNav", "Resources", "资源", "แหล่งข้อมูล"],
+  ["overdueItems", "Overdue items", "已逾期事项", "รายการเกินกำหนด"],
+  ["due30", "Due within 30 days", "30 天内到期", "ครบกำหนดภายใน 30 วัน"],
+  [
+    "documentCases",
+    "People needing documents",
+    "材料待处理人员",
+    "บุคลากรที่ต้องติดตามเอกสาร",
+  ],
+  [
+    "missingExpired",
+    "Missing or expired documents",
+    "缺失或过期材料",
+    "เอกสารขาดหรือหมดอายุ",
+  ],
+  ["employeeCases", "Employee cases", "员工办理记录", "รายการของพนักงาน"],
+  ["deadlinesLabel", "deadlines", "个到期事项", "กำหนดเวลา"],
+  ["reviewAction", "Review", "查看", "ตรวจสอบ"],
+  ["priorityActions", "Priority actions", "优先事项", "รายการเร่งด่วน"],
+  [
+    "priorityHelp",
+    "Overdue first, then deadlines within 30 days. Includes passport expiry.",
+    "先处理逾期，再处理 30 天内到期事项，包括护照。",
+    "แสดงรายการเกินกำหนดก่อน ตามด้วยรายการครบกำหนดใน 30 วัน รวมวันหมดอายุหนังสือเดินทาง",
+  ],
+  ["upcomingDeadlines", "Upcoming deadlines", "即将到期", "กำหนดที่กำลังจะถึง"],
+  ["reviewDocuments", "Review documents", "查看材料", "ตรวจสอบเอกสาร"],
+  [
+    "localLaunchHint",
+    "This Mac · Open BOI Dashboard.command first",
+    "此 Mac · 请先运行 Open BOI Dashboard.command",
+    "Mac เครื่องนี้ · เปิด Open BOI Dashboard.command ก่อน",
+  ],
   [
     "privateDashboard",
     "Your private BOI workspace",
